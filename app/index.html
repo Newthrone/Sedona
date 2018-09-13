@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sedona</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/custom-reset.css">
+  <link rel="stylesheet" href="/css/main.css">
+
+
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url("img/320.png");
+    }
+
+    /* Планшет */
+
+    @media ( min-width: 768px) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url("/maket/sedona-index-768.jpg");
+      }
+    }
+
+    /* Десктоп */
+
+    @media ( min-width: 1200px) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url("/maket/sedona-index-1200.jpg");
+      }
+    }
+  </style>
+  <link href="/pixel-glass-js-master/styles.css" rel="stylesheet">
+  <script src="/pixel-glass-js-master/script.js"></script>
+
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="body-shadow">
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <div>
+                <a class="active" href="#">информация</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="#">фото и видео</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="#map">карта штата</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="#">гостиницы</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="main-block">
+        <picture>
+          <picture>
+            <source srcset="/image/main-picture768.jpg" media="(max-width: 1200px)">
+            <source srcset="/image/main-picture.jpg">
+            <img src="/image/main-picture768.jpg" alt="main-picture" style="width: 100%; height: auto;">
+          </picture>
+          <div class="main-block-text">
+            <h2>седона — небольшой городок в аризоне, заслуживающий большего!</h2>
+            <p>рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
+          </div>
+      </section>
+      <section class="reason reason-one">
+        <div>
+          <h2>настоящий городок</h2>
+          <span>— №1 —</span>
+          <p>седона — не аттракцион для туристов, там течёт своя жизнь</p>
+        </div>
+        <div>
+          <picture>
+            <source srcset="/image/content-image768.jpg" media="(max-width: 1200px)">
+            <source srcset="/image/content-image.jpg">
+            <img src="/image/content-image.jpg" alt="content-image1">
+          </picture>
+        </div>
+      </section>
+      <section class="conditions">
+        <section class="housing">
+          <img src="/image/house.svg" alt="house">
+          <h2>жилье</h2>
+          <p>рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        </section>
+        <section class="food">
+          <img src="/image/food.svg" alt="food">
+          <h2>еда</h2>
+          <p>всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        </section>
+        <section class="souvenir">
+          <img src="/image/souvenir.svg" alt="souvenir">
+          <h2>сувениры</h2>
+          <p>не только китайского,
+            <br> но и местного производства!</p>
+        </section>
+      </section>
+      <section class="reason reason-two">
+        <div>
+          <picture>
+            <source srcset="/image/content-image2_768.jpg" media="(max-width: 1200px)">
+            <source srcset="/image/content-image2.jpg">
+            <img src="/image/content-image2.jpg" alt="content-image2">
+          </picture>
+        </div>
+        <div>
+          <h2>там есть
+            <br>мост дьявола</h2>
+          <span>— №2 —</span>
+          <p>да, по нему можно пройти! если конечно вы осмелитесь</p>
+        </div>
+      </section>
+      <section class="reason3-5">
+        <section class="reason-three">
+          <h2>небольшая площадь</h2>
+          <span>— №3 —</span>
+          <p>все достопримеча&shy;тельности находятся очень близко</p>
+        </section>
+        <section class="reason-four">
+          <h2>красивая дорога</h2>
+          <span>— №4 —</span>
+          <p>ехать в седону из лас-вегаса совсем не скучно!</p>
+        </section>
+        <section class="reason-five">
+          <h2>мало туристов</h2>
+          <span>— №5 —</span>
+          <p>большинство едет в гранд каньон и толпится там</p>
+        </section>
+      </section>
+      <section class="search-hotel">
+        <strong>заинтересовались?</strong>
+        <p>укажите предполагаемые даты поездки,
+          <br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <button class="search-hotel-button">поиск гостиницы в седоне</button>
+        <section class="search-form">
+          <form action="#1">
+            <div class="flex-wrapper">
+              <label class="check-in" for="check-in">дата заезда</label>
+              <input type="text" id="check-in" name="check-in-date" value="01 октября 2018">
+              <div class="icon-calendar"></div>
+            </div>
+            <div class="flex-wrapper">
+              <label for="check-out">дата выезда</label>
+              <input type="text" id="check-out" name="check-out-date" value="11 октября 2018">
+              <div class="icon-calendar"></div>
+            </div>
+            <div class="number-person">
+              <label class="adults" for="adults">взрослые
+                <input type="number" id="adults" value="2" maxvalue="10">
+                <span class="icon-minus"></span>
+                <span class="icon-plus"></span>
+              </label>
+              <label class="child" for="child">дети
+                <input type="number" id="child" value="0">
+                <span class="icon-minus"></span>
+                <span class="icon-plus"></span>
+              </label>
+            </div>
+            <button type="submit"><span>найти</span></button>
+          </form>
+        </section>
+      </section>
+      <section class="map" id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d513845.2482035586!2d-112.0556008374383!3d34.71506104422522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1534964812049"
+          width="100%" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </section>
+      <footer>
+        <div class="hashtag">
+          <a href="#1">
+            <h2>#visitsedona</h2>
+          </a>
+        </div>
+        <div class="socials">
+          <a class="social icon-twitter" href="#3"></a>
+          <a class="social icon-facebook" href="#3"></a>
+          <a class="social icon-youtube" href="#3"></a>
+        </div>
+        <div class="creator">
+          <a href="#3">
+            <small>Website by</small>
+            <br>Vyacheslav Belozerov</a>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
