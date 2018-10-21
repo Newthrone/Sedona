@@ -459,9 +459,12 @@ footer {
   -ms-flex-align: center;
   align-items: center;
   background: #fff;
-  opacity: 0.9;
-  margin-top: -125px;
+  opacity: 0.9;  
   padding: 36px 0;
+}
+
+.mt-125 {
+  margin-top: -125px;
 }
 
 .hashtag a {
@@ -612,3 +615,9 @@ footer {
   }
 }
 
+/* ============================  HOTELS.HTML  ============================ */
+
+.hotels-filter {
+  min-height: 217px;
+  background-image: url(/image/hotels-bg-1200.jpg);
+}

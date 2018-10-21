@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sedona</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/custom-reset.css">
+  <link rel="stylesheet" href="/css/main.css">
+
+
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url("img/320.png");
+    }
+
+    /* Планшет */
+
+    @media ( min-width: 768px) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url("/maket/sedona-hotels-768.jpg");
+      }
+    }
+
+    /* Десктоп */
+
+    @media ( min-width: 1200px) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url("/maket/sedona-hotels-1200.jpg");
+      }
+    }
+  </style>
+  <link href="/pixel-glass-js-master/styles.css" rel="stylesheet">
+  <script src="/pixel-glass-js-master/script.js"></script>
+
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="body-shadow">
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <div>
+                <a href="/index.html">информация</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="#">фото и видео</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="/index.html#map">карта штата</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="active" href="#">гостиницы</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="hotels-filter">
+        <form action="#">
+            <fieldset>
+                <legend>инфраструктура</legend>
+                <input type="checkbox">
+                
+            </fieldset>
+        </form>
+      </section>
+      <footer>
+        <div class="hashtag">
+          <a href="#1">
+            <h2>#visitsedona</h2>
+          </a>
+        </div>
+        <div class="socials">
+          <a class="social icon-twitter" href="#3"></a>
+          <a class="social icon-facebook" href="#3"></a>
+          <a class="social icon-youtube" href="#3"></a>
+        </div>
+        <div class="creator">
+          <a href="#3">
+            <small>Website by</small>
+            <br>Vyacheslav Belozerov</a>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
