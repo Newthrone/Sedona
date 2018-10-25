@@ -34,6 +34,7 @@
         background-image: url("/maket/sedona-hotels-1200.jpg");
       }
     }
+
   </style>
   <link href="/pixel-glass-js-master/styles.css" rel="stylesheet">
   <script src="/pixel-glass-js-master/script.js"></script>
@@ -72,34 +73,36 @@
       </header>
       <section class="hotels-filter">
         <form class="hotels-filter-form" action="#">
-            <fieldset class="filters-first">
-                <legend>инфраструктура:</legend>
-                <input id="pool" type="checkbox">
-                <label class="icon-check" for="pool">бассейн</label>
-                <input id="parking" type="checkbox">
-                <label class="icon-check" for="parking">парковка</label>                
-                <input id="wifi" type="checkbox">
-                <label class="icon-check" for="wifi">wi-fi</label>                
-            </fieldset>
-            <fieldset class="filters-second">
-                <legend>тип жилья:</legend>
-                <input id="hotel" type="checkbox">
-                <label class="icon-check" for="hotel">гостиница</label>
-                <input id="motel" type="checkbox">
-                <label class="icon-check" for="motel">мотель</label>
-                <input id="apartment" type="checkbox">
-                <label class="icon-check" for="apartment">апартаменты</label>                
-            </fieldset>
-            <fieldset class="filters-third">
-              <legend>стоимость в сутки (р):</legend>
-              <div class="text_range">
-                <span>от<input type="text" value="0"></span>
-                <span>до<input type="text" value="3000"></span>
-              </div>
-              <input type="range">
-              <input type="range">
-              <button>показать</button>              
-            </fieldset>
+          <fieldset class="filters-first">
+            <legend>инфраструктура:</legend>
+            <input id="pool" type="checkbox">
+            <label class="icon-check" for="pool">бассейн</label>
+            <input id="parking" type="checkbox">
+            <label class="icon-check" for="parking">парковка</label>
+            <input id="wifi" type="checkbox">
+            <label class="icon-check" for="wifi">wi-fi</label>
+          </fieldset>
+          <fieldset class="filters-second">
+            <legend>тип жилья:</legend>
+            <input id="hotel" type="checkbox">
+            <label class="icon-check" for="hotel">гостиница</label>
+            <input id="motel" type="checkbox">
+            <label class="icon-check" for="motel">мотель</label>
+            <input id="apartment" type="checkbox">
+            <label class="icon-check" for="apartment">апартаменты</label>
+          </fieldset>
+          <fieldset class="filters-third">
+            <legend>стоимость в сутки (р):</legend>
+            <div class="text_range">
+              <div>от<input type="text" value="0"></div>
+              <div>до<input type="text" value="3000"></div>
+            </div>
+            <div class="join_range">
+              <input class="rangefirst" type="range" value="0">
+              <input class="rangesecond" type="range">
+            </div>
+            <button>показать</button>
+          </fieldset>
         </form>
       </section>
       <footer>

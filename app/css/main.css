@@ -694,26 +694,48 @@ footer {
 }
 
 .text_range {
+  position: relative;
+  display: flex;
+  align-items: center;
   margin-top: 10px;
   width: 318px;
   height: 36px;
   border: 2px solid #fff;
   border-radius: 3px;
-  text-align: center;
 }
 
-.text_range span {
-  vertical-align: middle;
+.text_range div {
+  margin-left: 64px;
+  margin-right: 10px
+}
+
+.text_range div:first-child::after {
+  position: absolute;
+  left: 157px;
+  content: "";
+  width: 2px;
+  height: 22px;
+  background-color: #fff;
 }
 
 .text_range input {
-  background: red;
   width: 50px;
+  margin-left: 5px;
 }
 
+.join_range {
+  position: relative;
+  margin-top: 11px;
+}
 
+.rangefirst {
+  width: 316px;
+}
 
-
+.rangesecond {
+  position: absolute;
+  opacity: 0;
+}
 
 
 
