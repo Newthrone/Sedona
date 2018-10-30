@@ -34,6 +34,12 @@ body {
   font-kerning: none;
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .wrapper {
   width: 1280px;
   padding: 0 40px;
@@ -664,6 +670,11 @@ footer {
   display: block;
   padding-left: 40px;
   padding-top: 25px;
+  cursor: pointer;    
+}
+
+.hotels-filter-form input:disabled + label {
+  cursor: default;
 }
 
 .icon-check::before {
@@ -671,10 +682,15 @@ footer {
   left: 1px;
   top: 35px;
   font-size: 26px;
+  color: #fff;
 }
 
 .hotels-filter-form input:checked+.icon-check::before {
   content: "\2611";
+}
+
+.hotels-filter-form input:disabled + .icon-check::before {
+  color: #6a6a6a;
 }
 
 .hotels-filter-form input[type="checkbox"] {
@@ -695,7 +711,11 @@ footer {
 
 .text_range {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 10px;
   width: 318px;
@@ -723,38 +743,131 @@ footer {
   margin-left: 5px;
 }
 
-.join_range {
+
+/***************************input[type="range"]*************************************/
+
+.ui-slider {
+  margin-top: 20px;
+  margin-left: 9px;
   position: relative;
-  margin-top: 11px;
+/*  text-align: left;*/
+  height: 2px;  
+  font-size: 1.1em;
+  border: 0px solid #aaaaaa;
+  background: #ffffff;
+/*  color: red;*/
 }
 
-.rangefirst {
-  width: 316px;
-}
 
-.rangesecond {
+
+.ui-slider .ui-slider-range {
   position: absolute;
-  opacity: 0;
+  z-index: 1;
+  font-size: 2.7em;
+  display: block;
+  border: 0;
+  background-position: 0% 0;
+  top: 0;
+  left: 50px;
+  height: 100%;
+  border: 1px solid #aaaaaa;
+  background: #cccccc;
+  color: #222222;
+  font-weight: bold;
 }
 
 
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 50%;
+  cursor: pointer;
+  top: -.6em;
+  margin-left: -.6em;  
+  background: radial-gradient(circle, #ababab 0%, #ababab 13%, #fff 13%, #fff 100%);
+  -webkit-box-shadow: 12px 0 0 0 rgba(0,0,0, 0.14);
+  box-shadow: 0px 2px 0 0 rgba(0,0,0, 0.14);
+}
 
+.ui-slider .ui-slider-handle:hover,
+.ui-slider .ui-state-active {
+  background: radial-gradient(circle, #1c4f80 0%, #1c4f80 13%, #fff 13%, #fff 100%);
+}
 
+/***************************END input[type="range"]*************************************/
 
+.filters-third button {
+  margin-top: 32px;
+  margin-left: 84px;
+  text-transform: uppercase;
+  padding: 5px 32px 6px 34px;
+  border: 2px solid #eee;
+  border-radius: 3px;
+}
 
+.filters-third button:hover {
+  color: #000;
+  background: #fff;
+}
 
+.sort-bar {
+  padding: 30px 0;
+}
 
+.found {
+  float: left;
+  padding-left: 71px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
 
+.sort-type {
+  float: left;
+  margin-left: 48px;
+  font-size: 12px;
+  line-height: 31px;
+}
 
+.sort-type span {
+  margin-right: 6px;
+}
 
+.sort-type a {
+  margin-left: 30px;
+}
 
+.sort-min-max {
+  float: right;
+  margin-right: 64px;
+  position: relative;
+  width: 43px;
+  height: 27px;
+  
+}
 
+.icon-up-dir {
+  margin-right: 20px;
+}
 
+.icon-up-dir::before {
+  content: "\25b2";  
+  font-size: 22px;
+}
 
+.icon-down-dir::before {
+  content: "\25bc";
+  font-size: 22px;
+}
 
+.icon-dir-active::before {
+  color: #81b3d2;
+}
 
-
-
-
+.sort-min-max a:hover::before {
+  color: #000;
+}
 
 

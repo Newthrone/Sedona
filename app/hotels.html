@@ -75,7 +75,7 @@
         <form class="hotels-filter-form" action="#">
           <fieldset class="filters-first">
             <legend>инфраструктура:</legend>
-            <input id="pool" type="checkbox">
+            <input id="pool" type="checkbox" checked>
             <label class="icon-check" for="pool">бассейн</label>
             <input id="parking" type="checkbox">
             <label class="icon-check" for="parking">парковка</label>
@@ -84,27 +84,57 @@
           </fieldset>
           <fieldset class="filters-second">
             <legend>тип жилья:</legend>
-            <input id="hotel" type="checkbox">
+            <input id="hotel" type="checkbox" checked>
             <label class="icon-check" for="hotel">гостиница</label>
-            <input id="motel" type="checkbox">
+            <input id="motel" type="checkbox" checked>
             <label class="icon-check" for="motel">мотель</label>
-            <input id="apartment" type="checkbox">
+            <input id="apartment" type="checkbox" checked>
             <label class="icon-check" for="apartment">апартаменты</label>
           </fieldset>
           <fieldset class="filters-third">
             <legend>стоимость в сутки (р):</legend>
             <div class="text_range">
-              <div>от<input type="text" value="0"></div>
-              <div>до<input type="text" value="3000"></div>
+              <div>от<input name="price_from" id="amount_before" type="text"></div>
+              <div>до<input name="price_to" id="amount_after" type="text"></div>
             </div>
-            <div class="join_range">
-              <input class="rangefirst" type="range" value="0">
-              <input class="rangesecond" type="range">
-            </div>
+            <div id="slider-range"></div>
+
+
+            <!-- Образующаяся структура
+    <div id="slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+     
+      <div class="ui-slider-range ui-widget-header" style="left: 10%; width: 70%;"></div>
+      
+      <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 10%;"></a>
+      
+      <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 80%;"></a>
+      
+      </div>
+    
+-->
             <button>показать</button>
           </fieldset>
         </form>
       </section>
+      <section class="hotels-list">
+        <section class="sort-bar clearfix">
+          <div class="found">найдено: <span class="numbers-of-hotels">3</span></div>
+          <div class="sort-type">
+            <span>сортировка:</span>
+            <a href="#1">по цене</a>
+            <a href="#1">по типу</a>
+            <a href="#1">по рейтингу</a>
+          </div>
+          <div class="sort-min-max">            
+            <a href="#1" class="icon-down-dir icon-dir-active"></a>
+            <a href="#1" class="icon-up-dir"></a>
+          </div>
+        </section>
+        <section></section>
+        <section></section>
+        <section></section>
+      </section>
+
       <footer>
         <div class="hashtag">
           <a href="#1">
@@ -126,6 +156,33 @@
     </div>
   </div>
   <script src="/js/script.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  <script>
+    $("#slider-range").slider({
+      range: true,
+      min: 0,
+      max: 3700,
+      step: 1,
+      values: [0, 3000],
+      slide: function(event, ui) {
+        $("#amount_before").val(ui.values[0]);
+        $("#amount_after").val(ui.values[1])
+      }
+    });
+
+    $('#amount_before').val($("#slider-range").slider("values", 0))
+    $('#amount_after').val($("#slider-range").slider("values", 1))
+
+    $('#amount_before').change(function() {
+      $("#slider-range").slider('values', 0, $(this).val());
+    });
+
+    $('#amount_after').change(function() {
+      $("#slider-range").slider('values', 1, $(this).val());
+    });
+
+  </script>
 </body>
 
 </html>
