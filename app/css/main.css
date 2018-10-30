@@ -813,12 +813,11 @@ footer {
 }
 
 .sort-bar {
-  padding: 30px 0;
+  padding: 30px 68px 25px 71px;
 }
 
 .found {
   float: left;
-  padding-left: 71px;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -837,29 +836,48 @@ footer {
 
 .sort-type a {
   margin-left: 30px;
+  border-bottom: 1px dotted #81b3d2;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sort-type a:hover {
+  color: #81b3d2;
+}
+
+.sort-type a:active {
+  color: #000000;
+  border: none;
+}
+
+.sort-type a.sort-active {
+  color: #81b3d2;
+  cursor: default;
+  border-bottom: none;
 }
 
 .sort-min-max {
   float: right;
-  margin-right: 64px;
+}
+
+.sort-min-max a {  
   position: relative;
-  width: 43px;
-  height: 27px;
-  
+  display: inline-block;  
+  width: 20px;
+  height: 5px;
+  margin: 0 0px;
+  cursor: default;
 }
 
-.icon-up-dir {
-  margin-right: 20px;
-}
-
-.icon-up-dir::before {
+.icon-up-dir::before,
+.icon-down-dir::before {
   content: "\25b2";  
   font-size: 22px;
+  left: 5px;
+  cursor: pointer;
 }
 
 .icon-down-dir::before {
   content: "\25bc";
-  font-size: 22px;
 }
 
 .icon-dir-active::before {
@@ -870,4 +888,26 @@ footer {
   color: #000;
 }
 
+.sort-min-max a:active::before {
+  color: #81b3d2;
+}
 
+.bordbot {
+  border-bottom: 1px solid #e5e5e5; 
+}
+
+.hotel-info {
+  padding: 30px 68px 30px 72px;
+}
+
+.hotel-name {
+  
+}
+
+.hotelimgsize {
+  float: left;
+}
+
+.hotel {
+
+}
